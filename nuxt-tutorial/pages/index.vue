@@ -1,13 +1,18 @@
 <template>
   <section class="container">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <div>
       <app-logo/>
       <h1 class="title">
         Seguir Aprendiendo espñol....
       </h1>
+      <p>con efrain y diego</p>
       <h2 class="subtitle">
         seleccione lo que desea abrir
       </h2>
+      <input class="form-control" v-model="message" type="text" placeholder="Readonly input here...">
+      <button type="submit" class="btn btn-primary mb-2" v-on:click = "getLink">Get Link</button>
+      
       <div class="links">
         <a
           href="https://www.youtube.com/"
@@ -18,7 +23,7 @@
         <a
           href="https://www.spanishdict.com/"
           target="_blank"
-          class="button--grey">SpanDict</a>
+          class="button--blue">SpanDict</a>
       </div>
     </div>
   </section>
@@ -30,6 +35,22 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  data() {
+    return {
+    message : 'Escriba algo para traducir...',
+    link : ''
+    }
+  },
+  methods: {
+    getLink : () => {
+      this.link = 'https://www.spanishdict.com/translate/' + this.message.forEach(element => {
+        if (element === ' ') {
+          element = '%'
+        }
+      });
+      window.open(this.link, '_blank');
+    },
   }
 }
 </script>
@@ -39,6 +60,11 @@ export default {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+}
+
+.input_123 {
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .container {
@@ -54,7 +80,7 @@ export default {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 70px;
+  font-size: 40px;
   color: #35495e;
   letter-spacing: 1px;
   animation: change-color 15s 3.5s;
@@ -62,7 +88,7 @@ export default {
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 27px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;

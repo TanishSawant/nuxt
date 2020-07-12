@@ -30,6 +30,21 @@ html {
   padding: 10px 30px;
 }
 
+.button--blue {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b5980;
+  color: #012247;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--blue:hover {
+  color: #fff;
+  background-color: #0c047c;
+}
+
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
