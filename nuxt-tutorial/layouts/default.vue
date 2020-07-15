@@ -40,6 +40,22 @@ html {
   margin-left: 15px;
 }
 
+.button--blue--add {
+  pointer-events: painted;
+  display: inline-block;
+  border-radius: 150px;
+  border: 1px solid #c1f505;
+  color: #a3fa02;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--blue--add:hover {
+  color: #fff;
+  background-color: #f7d473;
+}
+
 .button--blue:hover {
   color: #fff;
   background-color: #0c047c;

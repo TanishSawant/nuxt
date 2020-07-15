@@ -10,8 +10,6 @@
       <h2 class="subtitle">
         seleccione lo que desea abrir
       </h2>
-      <input class="form-control" v-model="message" type="text" placeholder="Readonly input here...">
-      <button type="submit" class="btn btn-primary mb-2" v-on:click = "getLink">Get Link</button>
       
       <div class="links">
         <a
@@ -24,6 +22,9 @@
           href="https://www.spanishdict.com/"
           target="_blank"
           class="button--blue">SpanDict</a>
+        <div class="button--blue--add">
+          <h3>+</h3>
+        </div>
       </div>
     </div>
   </section>
@@ -43,14 +44,7 @@ export default {
     }
   },
   methods: {
-    getLink : () => {
-      this.link = 'https://www.spanishdict.com/translate/' + this.message.forEach(element => {
-        if (element === ' ') {
-          element = '%'
-        }
-      });
-      window.open(this.link, '_blank');
-    },
+    
   }
 }
 </script>
@@ -73,7 +67,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .title {
