@@ -6,7 +6,7 @@
       <h1 class="title">
         Seguir Aprendiendo espñol....
       </h1>
-      <p>con efrain y diego</p>
+      <p>con Efrain y Diego</p>
       <h2 class="subtitle">
         seleccione lo que desea abrir
       </h2>
